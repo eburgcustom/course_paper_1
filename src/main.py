@@ -67,7 +67,7 @@ def main() -> None:
     Главная функция, которая запускает все реализованные функциональности.
     """
     # Путь к файлу с транзакциями
-    transactions_file = "data/operations.xlsx"
+    transactions_file = "../data/operations.xlsx"
 
     # Чтение транзакций
     transactions_df = read_transactions_from_excel(transactions_file)

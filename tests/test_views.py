@@ -30,8 +30,8 @@ def test_main_page_view_success(mocker: MagicMock, sample_transactions_df: pd.Da
     mocker.patch("src.views.get_user_settings", return_value={"user_stocks": ["AAPL"], "user_currencies": ["USD"]})
     mocker.patch("src.views.get_stock_prices", return_value=[{"stock": "AAPL", "price": 180.5}])
     mocker.patch("src.views.get_currency_rates", return_value=[{"currency": "USD", "rate": 90.0}])
-    mocker.patch("src.views.get_top_expenses", return_value=[{"category": "Развлечения", "amount": 5000.0}])
-    mocker.patch("src.views.get_transactions_for_period", return_value=sample_transactions_df)
+    mocker.patch("src.utils.get_top_expenses", return_value=[{"category": "Развлечения", "amount": 5000.0}])
+    mocker.patch("src.utils.get_transactions_for_period", return_value=sample_transactions_df)
 
     # Дата для фильтрации транзакций
     date_str = "2024-07-31 23:59:59"

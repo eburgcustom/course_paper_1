@@ -22,7 +22,7 @@ def main_page_view(transactions: pd.DataFrame, date_time: str) -> str:
     greeting = get_greeting()
 
     # Получаем настройки пользователя
-    user_settings = get_user_settings("user_settings.json")
+    user_settings = get_user_settings("../user_settings.json")
 
     # Получаем данные о курсах валют и акциях
     currency_rates = get_currency_rates(user_settings.get("user_currencies", []))
